@@ -14,37 +14,45 @@ public class TreasureFishing extends AbilityAbstract
    
 	private static TreasureFishing i = new TreasureFishing();
 	public static TreasureFishing get() { return i; }
-	private TreasureFishing() { }
+	private TreasureFishing()
+	{
+		this.setDesc("Fish treasures");
+		
+		this.setName("Treasure Fishing");
+		
+		this.setType(AbilityType.PASSIVE);
+		
+		this.setCooldownMillis(-1);
+	}
 	
 	@Override
 	public String getId()
 	{
-		// TODO Auto-generated method stub
-		return null;
+		return "derius:fishing:treasure";
 	}
+	
 	@Override
 	public Skill getSkill()
 	{
-		// TODO Auto-generated method stub
-		return null;
+		return FishingSkill.get();
 	}
+	
 	@Override
 	public Optional<String> getLvlDescriptionMsg(int lvl)
 	{
-		// TODO Auto-generated method stub
-		return null;
+		return Optional.empty();
 	}
+	
 	@Override
 	public Object onActivate(DPlayer dplayer, Object other)
 	{
-		// TODO Auto-generated method stub
 		return null;
 	}
+	
 	@Override
 	public void onDeactivate(DPlayer dplayer, Object other)
 	{
-		// TODO Auto-generated method stub
-		
+
 	}
 
 
