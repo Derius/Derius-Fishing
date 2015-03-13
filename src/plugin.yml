@@ -1,0 +1,8 @@
+main: dk.muj.derius.fishing.DeriusFishing
+name: Derius-Fishing
+version: 0.2_dev
+#website: http://muj.dk/Derius
+authors: [madus, ulumulu1510]
+description: §eFishing
+depend: [Derius-Core]
+load: startup
