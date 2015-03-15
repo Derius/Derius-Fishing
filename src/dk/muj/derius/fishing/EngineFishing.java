@@ -17,16 +17,17 @@ import dk.muj.derius.api.DeriusAPI;
 import dk.muj.derius.api.VerboseLevel;
 import dk.muj.derius.api.player.DPlayer;
 import dk.muj.derius.api.util.AbilityUtil;
+import dk.muj.derius.api.util.SkillUtil;
 
-public class FishingEngine extends EngineAbstract
+public class EngineFishing extends EngineAbstract
 {
 	// -------------------------------------------- //
 	// INSTANCE & CONSTRUCT
 	// -------------------------------------------- //
    
-	private static FishingEngine i = new FishingEngine();
-	public static FishingEngine get() { return i; }
-	private FishingEngine() { }
+	private static EngineFishing i = new EngineFishing();
+	public static EngineFishing get() { return i; }
+	private EngineFishing() { }
 	
 	// -------------------------------------------- //
 	// OVERRIDE
@@ -59,7 +60,10 @@ public class FishingEngine extends EngineAbstract
 		}
 		
 		// Exp gain
-		dplayer.addExp(FishingSkill.get(), FishingSkill.getExpGain());
+		if (SkillUtil.canPlayerLearnSkill(dplayer, FishingSkill.get(), VerboseLevel.HIGH))
+		{
+			dplayer.addExp(FishingSkill.get(), FishingSkill.getExpGain());
+		}
 	}
 	
 }

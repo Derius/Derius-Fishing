@@ -36,7 +36,7 @@ public final class DeriusFishing extends MassivePlugin
 		CarefulFishing.get().register();
 		TreasureFishing.get().register();
 		
-		FishingEngine.get().activate();
+		EngineFishing.get().activate();
 		
 		this.postEnable();
 	}
