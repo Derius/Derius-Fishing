@@ -5,7 +5,7 @@ import com.massivecraft.massivecore.MassivePlugin;
 import dk.muj.derius.fishing.reward.RewardMixin;
 import dk.muj.derius.fishing.reward.RewardMixinDefault;
 
-public class DeriusFishing extends MassivePlugin
+public final class DeriusFishing extends MassivePlugin
 {
 	// -------------------------------------------- //
 	// INSTANCE & CONSTRUCT
@@ -13,7 +13,7 @@ public class DeriusFishing extends MassivePlugin
 	
 	private static DeriusFishing i;
 	public static DeriusFishing get() { return i; }
-	public DeriusFishing() { i = this; }
+	private DeriusFishing() { i = this; }
 	
 	// -------------------------------------------- //
 	// REWARD MIXIN
