@@ -13,7 +13,7 @@ public final class DeriusFishing extends MassivePlugin
 	
 	private static DeriusFishing i;
 	public static DeriusFishing get() { return i; }
-	private DeriusFishing() { i = this; }
+	public DeriusFishing() { i = this; }
 	
 	// -------------------------------------------- //
 	// REWARD MIXIN
