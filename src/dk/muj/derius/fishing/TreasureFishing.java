@@ -1,12 +1,15 @@
 package dk.muj.derius.fishing;
 
+import java.util.List;
 import java.util.Optional;
+
+import org.bukkit.inventory.ItemStack;
 
 import dk.muj.derius.api.ability.AbilityAbstract;
 import dk.muj.derius.api.player.DPlayer;
 import dk.muj.derius.api.skill.Skill;
 
-public class TreasureFishing extends AbilityAbstract
+public class TreasureFishing extends AbilityAbstract<List<ItemStack>>
 {
 	// -------------------------------------------- //
 	// INSTANCE & CONSTRUCT
@@ -44,9 +47,9 @@ public class TreasureFishing extends AbilityAbstract
 	}
 	
 	@Override
-	public Object onActivate(DPlayer dplayer, Object other)
+	public Object onActivate(DPlayer dplayer, List<ItemStack> other)
 	{
-		return null;
+		return other;
 	}
 	
 	@Override
